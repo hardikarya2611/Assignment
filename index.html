@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Various Input Types</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Fill the Form</h2>
+        <form id="dataForm">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Gender:</label>
+                <div class="gender-options">
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="Male" required> Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="Female" required> Female
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="dropdown">Choose a Country:</label>
+                <select id="dropdown" name="country" required>
+                    <option value="">--Select--</option>
+                    <option value="USA">USA</option>
+                    <option value="India">India</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="checkbox">
+                    <input type="checkbox" id="checkbox" name="agree" required> I agree to the terms
+                </label>
+            </div>
+
+            <div class="input-group">
+                <label for="resume">Upload Resume (PDF/Word):</label>
+                <input type="file" id="resume" name="resume" accept=".pdf, .docx, .doc" required>
+            </div>
+
+            <div class="input-group">
+                <label for="number">Age:</label>
+                <input type="number" id="number" name="age" min="18" max="100" required>
+            </div>
+
+            <div class="input-group">
+                <label for="textInput">Text Input:</label>
+                <input type="text" id="textInput" name="textInput">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <h3>Form Data:</h3>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                    <th>Agree to Terms</th>
+                    <th>Resume</th>
+                    <th>Age</th>
+                    <th>Text Input</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- Button to download HTML content -->
+        <button id="downloadHtmlBtn">Download HTML</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
